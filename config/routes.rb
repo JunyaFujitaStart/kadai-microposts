@@ -8,17 +8,15 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   delete 'delete', to: 'users#destroy'
   
-  
   resources :users, only: [:index, :show, :create] do
     member do
       get :followings
       get :followers
-    end
-    collection do
-      get :search
+      get :likes
     end
   end
   
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:create, :destroy]
 end
