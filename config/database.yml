@@ -54,4 +54,4 @@ production:
   pool: 5
   database: kadai_microposts_production
   username: kadai_microposts
-  password: <%= ENV['KADAI_TASKLIST_DATABASE_PASSWORD'] %>
+  password: <%= ENV['KADAI_MICROPOSTS_DATABASE_PASSWORD'] %>
